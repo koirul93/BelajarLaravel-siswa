@@ -27,8 +27,14 @@ class Siswacontroller extends Controller
     }
     public function update(Request $request, $id)
     {
+        //dd($request->all());
         $siswa = \App\Siswa::find($id);
         $siswa->update($request->all());
+        if ($request->hasFile('avatar')) {
+            $request->file('avatar')->move('images/', $request->file('avatar')->getClientOriginalName());
+            $siswa->avatar = $request->file('avatar')->getClientOriginalName();
+            $siswa->save();
+        }
         return redirect('/siswa')->with('Sukses', 'Data Berhasil di Update');
     }
     public function delete($id)
@@ -36,5 +42,10 @@ class Siswacontroller extends Controller
         $siswa = \App\Siswa::find($id);
         $siswa->delete();
         return redirect('/siswa')->with('sukses', 'Data Berhasil di Hapus');
+    }
+    public function profile($id)
+    {
+        $siswa = \App\Siswa::find($id);
+        return view('siswa.profile', ['siswa' => $siswa]);
     }
 }

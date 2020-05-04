@@ -33,8 +33,8 @@
                                     <?php $no++ ;?>
                                     <tr>
                                      <td>{{ $no }}</td>
-                                        <td>{{$siswa->nama_depan}}</td>
-                                        <td>{{$siswa->nama_belakang}}</td>
+                                    <td> <a href="/siswa/{{$siswa->id}}/profile"> {{$siswa->nama_depan}}</td> </a>
+                                        <td> <a href="#">{{$siswa->nama_belakang}}</td></a>
                                         <td>{{$siswa->jenis_kelamin}}</td>
                                         <td>{{$siswa->agama}}</td>
                                         <td>{{$siswa->alamat}}</td>
