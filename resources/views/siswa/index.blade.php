@@ -70,11 +70,15 @@
                 {{@csrf_field()}}
                 <div class="form-group">
                     <label for="exampleFormControlInput1">Nama Depan</label>
-                    <input name="nama_depan" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Khoirul">
+                    <input name="nama_depan" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Depan">
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlInput1">Nama Belakang</label>
-                    <input name="nama_belakang" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Saya">
+                    <input name="nama_belakang" type="text" class="form-control" id="exampleFormControlInput1" placeholder="Nama Belakang">
+                  </div>
+                  <div class="form-group">
+                    <label for="exampleFormControlInput1">EMail</label>
+                    <input name="email" type="email" class="form-control" id="exampleFormControlInput1" placeholder="Email">
                   </div>
                   <div class="form-group">
                     <label for="exampleFormControlSelect1">Jenis Kelamin</label>
